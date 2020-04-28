@@ -272,6 +272,9 @@ export default {
           this.showDayCalendar()
           break
       }
+      if (!this.isInline) {
+        this.$emit('opened')
+      }
     },
     /**
      * Are we allowed to show a specific picker view?
