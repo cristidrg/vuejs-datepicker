@@ -438,9 +438,7 @@ export default {
     close (emitEvent) {
       this.showDayView = this.showMonthView = this.showYearView = false
       if (!this.isInline) {
-        if (emitEvent) {
-          this.$emit('closed')
-        }
+        this.$emit('closed')
         document.removeEventListener('click', this.clickOutside, false)
       }
     },
